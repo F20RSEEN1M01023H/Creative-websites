@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Creative Website</title>
+    <style>
+        .navbar-nav .nav-item .nav-link {
+            padding-left: 30px;
+            transition: color 0.3s ease;
+
+        }
+
+        .navbar-toggler-icon {
+            background-color: #deae3e;
+        }
+
+        .navbar-toggler {
+            border-color: #ffc107;
+        }
+
+        #navbarNav {
+            margin-left: 70px;
+        }
+
+        .navbar-nav .nav-item:hover .nav-link,
+        .navbar-nav .nav-item.active .nav-link {
+            color: #289758 !important;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .btn-login {
+            padding: 9px 40px 9px 40px;
+            border-radius: 10px;
+        }
+
+        .tooltip-content {
+            width: 1200px;
+            background-color: #2a2c2f;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav .nav-item:hover .tooltip-content {
+            display: block;
+        }
+
+        .h:hover {
+            color: deepskyblue;
+        }
+
+        /* section2  */
+        .bg {
+            height: 550px;
+            background-image: url('/assets/1bg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .srch {
+            padding: 9px 60px 9px 60px;
+        }
+
+        .vertical-center {
+            position: relative;
+            top: 115px;
+            border-radius: 12px;
+
+        }
+
+        .bd {
+            border-left: 1px solid white;
+        }
+
+        .flip-box-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .flip-box {
+            width: 32%;
+            perspective: 1000px;
+
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* Adjust height as needed */
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front,
+        .flip-box-back {
+            border-radius: 25px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-front {
+            background-color: #2b2d30;
+            /* color: black; */
+        }
+
+        .flip-box-back {
+            background-color: #008960;
+            /* color: white; */
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-content {
+            padding: 30px 25px 30px 25px;
+        }
+
+        .back {
+            background: #008960;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        .carousel-item,
+        .col {
+            /* border: 1px solid #ccc; */
+            padding: 10px;
+            padding: 30px;
+        }
+
+        .move {
+            position: relative;
+            top: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sticky-top bg-dark ">
+        <div class="container ">
+            <nav class="navbar navbar-expand-lg py-3  ">
+
+                <img src="/assets/Logo.webp" alt="Logo" height="40x " width="100px">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav mx-5  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">HOME</a>
+                            <!-- Tooltip content -->
+                            <div class="tooltip-content  text-white">
+
+                                <!-- Tooltip content -->
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/assets/7.webp" alt="Image" height="430px" width="100%">
+                                    </div>
+                                    <div class="col-md-2 mt-5">
+                                        <h4>Development</h4>
+                                        <hr>
+                                        <p class="h">Content Analyze</p>
+                                        <p class="h">Project Management <span class="badge bg-danger">Trending</span>
+                                        </p>
+                                        <p class="h">CEO Documents</p>
+                                        <p class="h">Pricing Plan <span class="badge bg-danger">New</span></p>
+                                        <p class="h">Email Marketing</p>
+                                        <p class="h">Search Engine Optimization</p>
+                                        <p class="h">Development Issues</p>
+                                    </div>
+                                    <div class="col-md-2 mt-5">
+                                        <h4>Marketing</h4>
+                                        <hr>
+                                        <p class="h">Content Analyze</p>
+                                        <p class="h">Project Management <span class="badge bg-warning">Hot</span></p>
+                                        <p class="h">CEO Documents</p>
+                                        <p class="h">Pricing Plan <span class="badge bg-success">Trending</span></p>
+                                        <p class="h">Email Marketing</p>
+                                        <p class="h">Search Engine Optimization</p>
+                                        <p class="h">Development Issues</p>
+                                    </div>
+                                    <div class="col-md-3 mt-5">
+                                        <h4>Blogs</h4>
+                                        <hr>
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <img src="/assets/t1.jpg" alt="Image" width="100%" height="60px">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Sources For Digital Marketing</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <img src="/assets/t2.jpg" alt="Image" width="100%" height="60px">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Sources For Digital Marketing</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <img src="/assets/t3.jpg" alt="Image" width="100%" height="60px">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Sources For Digital Marketing</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <img src="/assets/t4.jpg" alt="Image" width="100%" height="60px">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Sources For Digital Marketing</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item  ">
+                            <a class="nav-link text-white" href="">ABOUT</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="">SERVICES</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="">TEAM </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="">BLOG</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="">CONTACT</a>
+                        </li>
+                    </ul>
+                    <button class=" btn-login btn btn-outline-primary mx-4 text-white ">Get&nbsp;Quote</button>
+
+                </div>
+        </div>
+        </nav>
+        </div>
+
+    </section>
+    <section class="bg">
+        <div class="container">
+            <div class="row pt-5 text-white align-items-center" style="height: 400px;">
+                <div class="col-6 col-md-8 col-sm-12">
+                    <h1 class="fw-bold text-white " style="font-size: 60px;">Creating Top <span class="text-info">
+                            Digital Solution </span></h1>
+                    <p class="pt-3"><small>Now led tedious shy lasting females off.  Dashwood marianne in of entrance be <br>
+                            on wondered possible
+                            building. Wondered sociable he
+                            insensible alteration. An mr <br> settling occasion insisted distance ladyship so.</small>
+                    </p>
+                    <p><i class="bi bi-check-all text-warning"></i><small>Desirous men exercise overcame procured
+                            speaking her followed. </small></p>
+                    <p><i class="bi bi-check-all text-warning"></i><small>Property men the why smallest graceful day
+                            insisted required.</small></p>
+                    <p><i class="bi bi-check-all text-warning"></i><small>Situation admitting promotion at or to
+                            perceived be.</small></p>
+
+                    <div class="input-group mt-5 text-white">
+                        <input type="text" class="bg-secondary text-white p-2  form-control" placeholder="Search....">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary  srch bg-primary text-center" type="button">
+                                <i class="fas fa-search text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-8 col-sm-12">
+
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section3 -->
+    <section class="" style="height: 500px; background-color: #1f2327;">
+        <div class="container text-white ">
+            <div class="row p-3  vertical-center" style="height: 300px;background-color:#292a2d;">
+                <div class="col">
+                    <img src="/assets/icon-1.webp" alt="" height="50px" width="50px">
+                    <h5 class="mt-2">Digital Strategy</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum placeat tenetur veniam
+                        dignissimos eius vero, laborum adipisci.</p>
+                </div>
+                <div class="col" style="border-radius: 12px; background-color:#1f1f20; height: 270px;">
+                    <img src="/assets/icon-2.webp" alt="" height="50px" width="50px">
+                    <h5 class="mt-2">Social Media</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum placeat tenetur veniam
+                        dignissimos eius vero, laborum adipisci.</p>
+                </div>
+                <div class="col">
+                    <img src="/assets/icon-3.webp" alt="" height="50px" width="50px">
+                    <h5 class="mt-2">Design Concept</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum placeat tenetur veniam
+                        dignissimos eius vero, laborum adipisci.</p>
+                </div>
+                <div class="col">
+                    <img src="/assets/icon-4.webp" alt="" height="50px" width="50px">
+                    <h5 class="mt-2">Media Pairing</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum placeat tenetur veniam
+                        dignissimos eius vero, laborum adipisci.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid text-white " style="background-color: #1f2327;">
+            <div class="row">
+                <div class="col-6"><img src="/assets/1.jpg" alt="" height="450px " width="100%"></div>
+                <div class="col-3 mt-5">
+                    <h2>About Us</h2>
+                    <hr>
+                    <p><small>Can curiosity may end shameless explained. True high on said mr on come. An do mr design
+                            at little myself wholly entire though. Attended of on stronger or mr pleasure.</small>
+                    </p>
+                    <p><small>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed
+                            declared or margaret. Joy horrible moreover man feelings own shy. Request norland neither
+                            mistake for yet. Between the for morning assured country believe. On even feet time have an
+                            no at. Relation so in confined smallest children unpacked delicate. Why sir end
+                            believe.</small></p>
+                </div>
+                <div class="col-3 mt-5 pt-5 bd">
+                    <p><i class="bi bi-check-all text-warning"></i> <small>Desirous men exercise overcame procured
+                            speaking her followed.</small></p>
+                    <p>
+                        <i class="bi bi-check-all text-warning"></i> <small>Property men the why smallest graceful day
+                            insisted required.</small>
+                    </p>
+                    <p>
+                        <i class="bi bi-check-all text-warning"></i> <small>Situation admitting promotion at or to
+                            perceived be.</small>
+                    </p>
+                    <p>
+                        <i class="bi bi-check-all text-warning"></i><small> Acuteness allowance eagerness favourite in
+                            extensive exquisite.</small>
+                    </p>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Tooltip on bottom on the right on the bottom ">
+                        Tooltip on bottom
+                    </button>
+                    <button class="btn btn-outline-primary bg-primary text-white">Explore More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #1f2327;">
+        <div class="container text-white">
+            <div class="row text-center align-items-center" style="height: 300px;">
+                <div class="col">
+                    <h1 class="text-success">156</h1>
+                    <p>Team Members</p>
+                </div>
+                <div class="col">
+                    <h1 class="text-warning">1k+</h1>
+                    <p>Project Completed</p>
+                </div>
+                <div class="col">
+                    <h1 class="text-info">100%</h1>
+                    <p>Positive Feedback</p>
+                </div>
+                <div class="col">
+                    <h1 class="text-danger">58</h1>
+                    <p>Award Winner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color:#1f2327 ; height: 900px;">
+        <div class="container text-white">
+            <div class="row text-center" style="width: 60%;margin: auto;">
+                <h1 class="fw-bold"> Company Roadmap</h1>
+                <p> <small>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed
+                        declared or margaret.
+                        Joy horrible moreover man feelings own shy. Request norland neither mistake for yet.</small></p>
+            </div>
+            <marquee behavior="alternate" direction="right" style="height: 500px;" scrollamount="5">
+                <div class="row text-white">
+                    <div class="row mt-3 text-center" style="height: 300px; ">
+                        <div class="col-3">
+                            <h5>May</h5>
+                            <p><small>opensea</small></p>
+                            <h3><i class="bi bi-flag-fill move btn btn-outline-light rounded-circle"></i></h3>
+                            <hr>
+                        </div>
+                        <div class="col-3">
+                            <h5>May</h5>
+                            <p><small>opensea</small></p>
+                            <h3><i class="bi bi-file-lock-fill move btn btn-outline-light rounded-circle"></i></h3>
+                            <hr>
+                        </div>
+                        <div class="col-3">
+                            <h5>May</h5>
+                            <p><small>opensea</small></p>
+                            <h3><i class="bi bi-brush-fill move btn btn-outline-light rounded-circle"></i></h3>
+                            <hr>
+                        </div>
+                        <div class="col-3">
+                            <h5>May</h5>
+                            <p><small>opensea</small></p>
+                            <h3><i class="bi bi-android2 move btn btn-outline-light rounded-circle"></i></h3>
+                            <hr>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <img src="/assets/t1.jpg" alt="" height="200px " width="200px">
+                                <h3><small>Hammad Ashraf</small></h3>
+                                <p>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. <br> Tenetur, architecto!</p>
+                            </div>
+                            <div class="col-3">
+                                <img src="/assets/t2.jpg" alt="" height="200px " width="200px">
+                                <h3><small>Hammad Ashraf</small></h3>
+                                <p>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. <br> Tenetur, architecto!</p>
+                            </div>
+                            <div class="col-3">
+                                <img src="/assets/t3.jpg" alt="" height="200px " width="200px">
+                                <h3><small>Hammad Ashraf</small></h3>
+                                <p>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. <br> Tenetur, architecto!</p>
+                            </div>
+                            <div class="col-3">
+                                <img src="/assets/t4.jpg" alt="" height="200px " width="200px">
+                                <h3><small>Hammad Ashraf</small></h3>
+                                <p>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. <br> Tenetur, architecto!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </marquee>
+        </div>
+    </section>
+    <section style="height: 600px; background-color: #1f2327;">
+        <div class="container">
+            <h1 class="text-white fw-bold">Our Company Services</h1>
+            <hr style="width: 100px; height: 4px; color: #07ff8b; background-color: #07ff8b;">
+            <div class="row text-white mt-5">
+                <div class="flip-box-container ">
+                    <div class="flip-box ">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <div class="flip-box-content ">
+                                    <h1><i class="bi bi-check-circle text-success fw-bold text-center"></i></h1>
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-content">
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                    <button class="text-white border border-3 back  ">Backend Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <div class="flip-box-content ">
+                                    <h1><i class="bi bi-check-circle text-success fw-bold text-center"></i></h1>
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-content">
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                    <button class="text-white border border-3 back  ">Backend Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <div class="flip-box-content ">
+                                    <h1><i class="bi bi-check-circle text-success fw-bold text-center"></i></h1>
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-content">
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                    <button class="text-white border border-3 back  ">Backend Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 text-white">
+                <div class="flip-box-container">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <div class="flip-box-content ">
+                                    <h1><i class="bi bi-check-circle text-success fw-bold text-center"></i></h1>
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-content">
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                    <button class="text-white border border-3 back  ">Backend Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <div class="flip-box-content ">
+                                    <h1><i class="bi bi-check-circle text-success fw-bold text-center"></i></h1>
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-content">
+                                    <h4><small>Email Marketing </small></h4>
+                                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor
+                                            sit.</small> </p>
+                                    <button class="text-white border border-3 back  ">Backend Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-box p-3">
+                        <h3>Get A Solutions To Your Businesses</h3>
+                        <p><small>Can curiosity may end shameless explained. True high on said mr on come. An do mr
+                                design at little myself wholly entire though. Attended of on stronger.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="height: 600px; background-color: #1f2327;">
+        <div class="container ">
+            <div class="row text-white">
+                <div class="col-6 mt-5">
+                    <h6 class="text-secondary">Dreams Come True</h6>
+                    <h2>Our Skills</h2>
+                    <p>Can curiosity may end shameless explained. True high on said mr on come. An do mr design at
+                        little myself wholly entire though. Attended of on stronger or mr pleasure.</p>
+                    <p>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed declared or
+                        margaret. Joy horrible moreover man feelings own shy. Request norland neither mistake for yet.
+                        Between the for morning assured country believe. On even feet time have an no at. Relation so in
+                        confined smallest children unpacked delicate. Why sir end believe.</p>
+                    <div class="row mt-3">
+                        <div class="col-1"><small>Design</small></div>
+                        <div class="col-10"></div>
+                        <div class="col-1"><small>70%</small></div>
+                    </div>
+                    <div class="progress " style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 70%; " aria-valuenow=""
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-1"><small>UI/UX</small></div>
+                        <div class="col-10"></div>
+                        <div class="col-1"><small>77%</small></div>
+                    </div>
+                    <div class="progress " style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 77%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-1"><small>Development</small></div>
+                        <div class="col-10"></div>
+                        <div class="col-1"><small>32%</small></div>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 32%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-1"><small>Marketing</small></div>
+                        <div class="col-10"></div>
+                        <div class="col-1"><small>56%</small></div>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 56%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-1"><small>SEO</small></div>
+                        <div class="col-10"></div>
+                        <div class="col-1"><small>83%</small></div>
+                    </div>
+                    <div class="progress " style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="/assets/7.webp" alt="" height="600px" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="height: 950px; background-color: #1f2327;">
+        <div class="container text-white">
+            <div class="row text-center pt-5 " style="width: 70%; margin: auto;">
+                <h1 class="fw-bold">Company Pricing</h1>
+                <p> <small>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed
+                        declared or margaret.
+                        Joy horrible moreover man feelings own shy. Request norland neither mistake for yet.</small></p>
+                <hr style="width: 150px; margin: auto; height: 4px; color: #07ff8b; background-color: #07ff8b;">
+            </div>
+            <div class="row text-center mt-5" style="background-color: #2a2c2f; border-radius: 25px;">
+                <div class="col mt-5 p-3">
+                    <h4 class="lh-1">Professional</h4>
+                    <p class="lh-1"> Single Use</p>
+                    <br>
+                    <h1 class="fw-bold lh-1"><small><sup class="fs-4">$</sup></small>79<small><sup
+                                class="fs-4">99</sup></small></h1>
+                    <p class="lh-1">/Month</p>
+                    <br>
+                    <hr>
+                    <p>Endeavor bachelor but add eat pleasure doubtful sociable. Age forming covered you entered the
+                        examine. Blessing scarcely confined her contempt wondered shy.</p>
+                    <button class="btn-primary btn btn-outline-primary text-white btn-lg">Get Started</button>
+                    <hr>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>Weekly Reporting</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary "></i>
+                        Web site Analysis</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>
+                        Google & Soc M. Analytics</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>
+                        Google & Soc M. Analytics</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>Keyword Research and Analysis</p>
+                </div>
+                <div class="col  p-3"
+                    style="background-color: #3c3d3e; border-radius: 25px; margin-top:-20px; height: 680px;">
+                    <h4 class="lh-1">Professional</h4>
+                    <p class="lh-1"> Single Use</p>
+                    <br>
+                    <h1 class="fw-bold lh-1"><small><sup class="fs-4">$</sup></small>79<small><sup
+                                class="fs-4">99</sup></small></h1>
+                    <p class="lh-1">/Month</p>
+                    <br>
+                    <hr>
+                    <p>Endeavor bachelor but add eat pleasure doubtful sociable. Age forming covered you entered the
+                        examine. Blessing scarcely confined her contempt wondered shy.</p>
+                    <button class="btn-primary btn btn-outline-primary text-white btn-lg">Get Started</button>
+                    <hr>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>Weekly Reporting</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary "></i>
+                        Web site Analysis</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>
+                        Google & Soc M. Analytics</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>
+                        Google & Soc M. Analytics</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>Keyword Research and Analysis</p>
+                </div>
+                <div class="col mt-5 p-3">
+                    <h4 class="lh-1">Professional</h4>
+                    <p class="lh-1"> Single Use</p>
+                    <br>
+                    <h1 class="fw-bold lh-1"><small><sup class="fs-4">$</sup></small>79<small><sup
+                                class="fs-4">99</sup></small></h1>
+                    <p class="lh-1">/Month</p>
+                    <br>
+                    <hr>
+                    <p>Endeavor bachelor but add eat pleasure doubtful sociable. Age forming covered you entered the
+                        examine. Blessing scarcely confined her contempt wondered shy.</p>
+                    <button class="btn-primary btn btn-outline-primary text-white btn-lg">Get Started</button>
+                    <hr>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>Weekly Reporting</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary "></i>
+                        Web site Analysis</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>
+                        Google & Soc M. Analytics</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>
+                        Google & Soc M. Analytics</p>
+                    <p><i class="bi bi-check-circle-fill text-secondary"></i>Keyword Research and Analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #1f2327;">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <h1 class="fw-bold">Our Projects</h1>
+                    <p>Can curiosity may end shameless explained. True high on said mr on come. An do mr design at
+                        little myself wholly entire though. Attended of on stronger.</p>
+                    <img src="/assets/graph.png" alt="" width="100%" height="400px">
+                </div>
+                <div class="col-6 mt-5">
+                    <img class="mt-4" src="/assets/8.webp" alt="" width="100%" height="500px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #1f2327;">
+        <div class="container-fluid text-white">
+            <div class="row text-center pt-5 " style="width: 60%; margin: auto;">
+                <h1 class="fw-bold">Our Projects</h1>
+                <p> <small>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed
+                        declared or margaret.
+                        Joy horrible moreover man feelings own shy. Request norland neither mistake for yet.</small></p>
+                <hr style="width: 150px; margin: auto; height: 4px; color: #07ff8b; background-color: #07ff8b;">
+            </div>
+            <div class="row mt-5">
+                <div class="col"><img src="/assets/g1.jpg" alt="" width="100%" height="300px"></div>
+                <div class="col"><img src="/assets/g2.jpg" alt="" width="100%" height="300px"></div>
+                <div class="col"><img src="/assets/g3.jpg" alt="" width="100%" height="300px"></div>
+                <div class="col"><img src="/assets/g4.jpg" alt="" width="100%" height="300px"></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col"><img src="/assets/g5.jpg" alt="" width="100%" height="300px"></div>
+                <div class="col"><img src="/assets/g6.jpg" alt="" width="100%" height="300px"></div>
+                <div class="col"><img src="/assets/g7.jpg" alt="" width="100%" height="300px"></div>
+                <div class="col"><img src="/assets/g8.jpg" alt="" width="100%" height="300px"></div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #1f2327; height: 650px;">
+        <div class="container-fluid text-white">
+            <div class="row text-center pt-5 " style="width: 60%; margin: auto;">
+                <h1 class="fw-bold">Happy Clients About Us</h1>
+                <p> <small>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed
+                        declared or margaret.
+                        Joy horrible moreover man feelings own shy. Request norland neither mistake for yet.</small></p>
+                <hr style="width: 150px; margin: auto; height: 4px; color: #07ff8b; background-color: #07ff8b;">
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container text-white">
+                            <div class="row justify-content-evenly">
+                                <div class="col ">
+                                    <div class="row " style="border-radius: 25px;background-color:#2a2c2f; " ;>
+                                        <div class="col">
+                                            <img src="/assets/c1.jpg" alt="Image 1" height="200px" width="200px"
+                                                style="border-radius: 25px;">
+                                            <h4>Alexia Vinson</h4>
+                                        </div>
+                                        <div class="col mt-3">
+                                            <h4>Amazing Quality</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum,
+                                                dolor sit amet consectetur adipisicing elit. </p>
+                                            <h3 class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col ">
+                                    <div class="row" style="border-radius: 25px;background-color:#2a2c2f ;">
+                                        <div class="col">
+                                            <img src="/assets/c3.jpg" alt="Image 1" height="200px" width="200px"
+                                                style="border-radius: 25px;">
+                                            <h4>Alexia Vinson</h4>
+                                        </div>
+                                        <div class="col mt-3 ">
+                                            <h4>Amazing Quality</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum,
+                                                dolor sit amet consectetur adipisicing elit. </p>
+                                            <h3 class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container text-white">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row" style="border-radius: 25px;background-color:#2a2c2f ;">
+                                        <div class="col">
+                                            <img src="/assets/c2.jpg" alt="Image 1" height="200px" width="200px"
+                                                style="border-radius: 25px;">
+                                            <h4>Alexia Vinson</h4>
+                                        </div>
+                                        <div class="col mt-3">
+                                            <h4>Amazing Quality</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum,
+                                                dolor sit amet consectetur adipisicing elit. </p>
+                                            <h3 class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row" style="border-radius: 25px;background-color:#2a2c2f ;">
+                                        <div class="col">
+                                            <img src="/assets/c3.jpg" alt="Image 1" height="200px" width="200px"
+                                                style="border-radius: 25px;">
+                                            <h4>Alexia Vinson</h4>
+                                        </div>
+                                        <div class="col mt-3">
+                                            <h4>Amazing Quality</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum,
+                                                dolor sit amet consectetur adipisicing elit. </p>
+                                            <h3 class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #1f2327; height: 800px;">
+        <div class="container text-white">
+            <div class="row ">
+                <div class="col-6" style="margin-top: 100px;">
+                    <h1>We Are More Than Digital Agency</h1>
+                    <p class="pt-2"><small>Village did removed enjoyed explain nor ham saw calling talking. Securing as
+                            informed declared or margaret. Joy horrible moreover man feelings own shy. Request norland
+                            neither mistake for yet. Between the for morning assured country believe. On even feet time
+                            have an no at. </small></p>
+                    <div class="row mt-2">
+                        <div class="col-1 text-center">
+                            <h1><i class="bi bi-check-circle-fill text-secondary"></i></h1>
+                        </div>
+                        <div class="col-10">
+                            <h5>Content Analyses</h5>
+                            <p> <small>Add multiple feature items, set different icons or images for each feature and
+                                    also give custom links if needed.</small></p>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-1 text-center">
+                            <h1><i class="bi bi-check-circle-fill text-secondary"></i></h1>
+                        </div>
+                        <div class="col-10">
+                            <h5>Project Management</h5>
+                            <p> <small>Choose your style from three different layouts and two unique icon background
+                                    shapes.</small></p>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-1 text-center">
+                            <h1><i class="bi bi-check-circle-fill text-secondary"></i></h1>
+                        </div>
+                        <div class="col-10">
+                            <h5>CEO Friendly</h5>
+                            <p> <small>Show a connector line between each icon, changes its color and style to fit your
+                                    unique design.</small></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row justify-content-evenly">
+                        <div class="col-5 text-center "
+                            style=" height: 350px; background-color:#3c3d3e ;border-radius: 25px;"><img
+                                style="border-radius: 25px;" class="mt-2" src="/assets/i1.jpg" alt="" height="200px"
+                                width="200px">
+                            <h5 class="mt-2">Kristin Mooney</h5>
+                            <p class="text-success">founder</p>
+                            <h1><i class="bi bi-facebook btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-twitter btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-linkedin btn btn-outline-success"></i></h1>
+                        </div>
+                        <div class="col-5 mt-5 text-center " style="background-color:#3c3d3e ;border-radius: 25px;"><img
+                                style="border-radius: 25px;" class="mt-2" src="/assets/i2.jpg" alt="" height="200px"
+                                width="200px">
+                            <h5 class="mt-2">Kristin Mooney</h5>
+                            <p class="text-success">founder</p>
+                            <h1><i class="bi bi-facebook btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-twitter btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-linkedin btn btn-outline-success"></i></h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly">
+                        <div class="col-5 text-center "
+                            style=" margin-top: -25px; height: 350px; background-color:#3c3d3e ;border-radius: 25px;">
+                            <img style="border-radius: 25px; " class="mt-2" src="/assets/i3.jpg" alt="" height="200px"
+                                width="200px">
+                            <h5 class="mt-2">Kristin Mooney</h5>
+                            <p class="text-success">founder</p>
+                            <h1><i class="bi bi-facebook btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-twitter btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-linkedin btn btn-outline-success"></i></h1>
+                        </div>
+                        <div class="col-5 mt-3 text-center " style="background-color:#3c3d3e ;border-radius: 25px;"><img
+                                style="border-radius: 25px;" class="mt-2" src="/assets/i4.jpg" alt="" height="200px"
+                                width="200px">
+                            <h5 class="mt-2">Kristin Mooney</h5>
+                            <p class="text-success">founder</p>
+                            <h1><i class="bi bi-facebook btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-twitter btn btn-outline-success"></i> <span></span><i
+                                    class="bi bi-linkedin btn btn-outline-success"></i></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section style="background-color: #1f2327; height: 1350px;">
+        <div class="container text-white">
+            <div class="row text-center pt-5 " style="width: 60%; margin: auto;">
+                <h1 class="fw-bold">Latest Blogs</h1>
+                <p> <small>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed
+                        declared or margaret.
+                        Joy horrible moreover man feelings own shy. Request norland neither mistake for yet.</small></p>
+                <hr style="width: 150px; margin: auto; height: 4px; color: #07ff8b; background-color: #07ff8b;">
+            </div>
+            <div class="row mt-4">
+                <div class="col ">
+                    <img src="/assets/B1.jpg" alt="" height="300px" width="100%">
+                    <h4>Sources For Digital Marketing</h4>
+                    <p> <small>June 1, 2022/
+                            3 Comments</small>
+                    </p>
+                    <p> <small>Was justice improve age article between. No projection as up preference reasonably
+                            delightful
+                            celebrated. Preserved and abilities assurance tolerably breakfast… </small></p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="col">
+                    <img src="/assets/B2.jpg" alt="" height="300px" width="100%">
+                    <h4>Sources For Digital Marketing</h4>
+                    <p> <small>June 1, 2022/
+                            3 Comments</small>
+                    </p>
+                    <p> <small>Was justice improve age article between. No projection as up preference reasonably
+                            delightful
+                            celebrated. Preserved and abilities assurance tolerably breakfast… </small></p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="col">
+                    <img src="/assets/B3.jpg" alt="" height="300px" width="100%">
+                    <h4>Sources For Digital Marketing</h4>
+                    <p> <small>June 1, 2022/
+                            3 Comments</small>
+                    </p>
+                    <p> <small>Was justice improve age article between. No projection as up preference reasonably
+                            delightful
+                            celebrated. Preserved and abilities assurance tolerably breakfast… </small></p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <img src="/assets/B4.jpg" alt="" height="300px" width="100%">
+                    <h4>Sources For Digital Marketing</h4>
+                    <p> <small>June 1, 2022/
+                            3 Comments</small>
+                    </p>
+                    <p> <small>Was justice improve age article between. No projection as up preference reasonably
+                            delightful
+                            celebrated. Preserved and abilities assurance tolerably breakfast… </small></p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="col">
+                    <img src="/assets/B5.jpg" alt="" height="300px" width="100%">
+                    <h4>Sources For Digital Marketing</h4>
+                    <p> <small>June 1, 2022/
+                            3 Comments</small>
+                    </p>
+                    <p> <small>Was justice improve age article between. No projection as up preference reasonably
+                            delightful
+                            celebrated. Preserved and abilities assurance tolerably breakfast… </small></p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="col">
+                    <img src="/assets/B6.jpg" alt="" height="300px" width="100%">
+                    <h4>Sources For Digital Marketing</h4>
+                    <p> <small>June 1, 2022/
+                            3 Comments</small>
+                    </p>
+                    <p> <small>Was justice improve age article between. No projection as up preference reasonably
+                            delightful
+                            celebrated. Preserved and abilities assurance tolerably breakfast… </small></p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        style="background-image: linear-gradient( #1f2327 10% 0%, rgba(32, 31, 31, 0.73) 10% 0%), url('/assets/bg.webp'); background-size: cover; background-position:center; background-color: #1f2327 !important; height: 400px;">
+        <div class="container text-white text-center ">
+            <div class="row pt-5 ">
+                <h1 class="mt-5 fw-bold">Have any project in mind?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                    mattis, pulvinar dapibus leo.</p>
+
+            </div>
+            <button class="btn-warning btn-lg btn btn-outline-warning text-white mt-5">Hire Us Now</button>
+        </div>
+    </section>
+    <section style="background-color: #1f2327; height: 550px;">
+        <div class="container-fluid text-white">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-4 mt-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control bg-dark" id="name" name="name"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control bg-dark" id="email" name="email"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control bg-dark" id="message" name="message" rows="4"
+                                placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-5">
+                    <div class="row  p-4" style="border-radius: 25px; background-color:#2a2c2f ;">
+                        <h2>Do You Want A More Direct Contact With Our Team?</h2>
+                        <p>Can curiosity may end shameless explained. True high on said mr on come. An do mr design at
+                            little myself wholly entire though. Attended of on stronger or mr pleasure.</p>
+                        <div class="row">
+                            <div class="col">
+                                <h1><i class="bi bi-check-square btn btn-outline-success"></i></h1>
+                                <h5>01- Initial Idea</h5>
+                                <p>Was drawing natural fat respect husband.</p>
+                            </div>
+                            <div class="col">
+                                <h1><i class="bi bi-check-square btn btn-outline-success"></i></h1>
+                                <h5>01- Initial Idea</h5>
+                                <p>Was drawing natural fat respect husband.</p>
+                            </div>
+                            <div class="col">
+                                <h1><i class="bi bi-check-square btn btn-outline-success"></i></h1>
+                                <h5>01- Initial Idea</h5>
+                                <p>Was drawing natural fat respect husband.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <section style="background-color: #1f2327; height: 450px;">
+        <div class="container text-white">
+            <div class="row text-center align-items-center"
+                style="border-radius: 25px; background-color: #2a2c2f; width: 100%; height: 300px;">
+                <div class="row" style="margin: auto; width: 70%;">
+                    <h1>For News Subscribe Us!</h1>
+                    <p>Can curiosity may end shameless explained. True high on said mr on come. An do mr design at
+                        little myself wholly entire though. Attended of on stronger or mr pleasure.</p>
+                    <div class="input-group mt-5 text-white">
+                        <input type="text" class="bg-secondary text-white p-2  form-control" placeholder="Search....">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary  srch bg-primary text-center" type="button">
+                                <i class="fas fa-search text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-center mt-5"><i class="bi bi-facebook btn btn-outline-success rounded-pill"></i>
+                <span></span><i class="bi bi-twitter btn btn-outline-success rounded-pill"></i> <span></span><i
+                    class="bi bi-linkedin btn btn-outline-success rounded-pill"></i>
+            </h1>
+            <p class="text-center">© 2024 Created by Hami</p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
